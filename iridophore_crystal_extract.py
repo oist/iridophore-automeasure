@@ -78,6 +78,7 @@ mag = "2000x"  # set if magnification/scales are different across groups (eg. "2
 
 # set input and output directories
 input_dir = os.path.join(detection_dir, type, mag, 'images')
+mask_dir = os.path.join(detection_dir, type, mag, 'masks')
 output_dir = os.path.join(detection_dir, type, mag, 'out')
 os.makedirs(output_dir, exist_ok=True)
 
@@ -95,8 +96,7 @@ for file_path in file_paths:
 
     # Mask for noisy images before cropping
     if mask_image:
-        mask_path = os.path.join(input_dir, 'masks')
-        mask_file = os.path.join(mask_path, f"{file_name}_mask.png")
+        mask_file = os.path.join(mask_dir, f"{file_name}_mask.png")
         mask = cv2.imread(mask_file, cv2.IMREAD_GRAYSCALE)
         if mask is None:
             print(f"Mask for {file_name} not found. Skipping masking.")

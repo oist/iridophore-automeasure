@@ -21,7 +21,7 @@ from scipy.stats import circstd, circvar, circmean, ranksums
 ################################
 # Function to load data
 def load_data_and_circvars(directory):
-    # Load and list Major_Axis_Length, Minor_Axis_Length, and Angles (radians) from all CSV files in the directory.
+    # Load and list Major_Axis_Lengths, Minor_Axis_Lengths, and Angles (radians) from all CSV files in the directory.
     # Also calculate and list individual circular variances of angles within each file.
     major_axes, minor_axes, angles = [], [], []
     circ_vars = []
@@ -32,8 +32,8 @@ def load_data_and_circvars(directory):
         df = pd.read_csv(file_path)
 
         # Collect major, minor axes and angles
-        major_axes.extend(df['Major_Axis_Length'].values)
-        minor_axes.extend(df['Minor_Axis_Length'].values)
+        major_axes.extend(df['Major_Axis_Lengths'].values)
+        minor_axes.extend(df['Minor_Axis_Lengths'].values)
         angle_values = df['Angle'].values
         angles.extend(angle_values)
 
