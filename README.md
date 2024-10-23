@@ -18,5 +18,5 @@ Python code for automated measuring of iridophore crystals from TEM images
 ```
 
 ## Test data
-Minumum test dataset provided as example (testdata.zip).
+Minumum test dataset provided as example (iridophore_testdata.tar.gz).
 Full dataset used in manuscript available with request.
