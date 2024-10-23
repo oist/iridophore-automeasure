@@ -16,6 +16,3 @@ Python code for automated measuring of iridophore crystals from TEM images
              ├── masks    # iridophore masks created in Fiji/ImageJ for noisy images (optional)
              └── out      # outputs of detection
 ```
-
-## Manuscript_Data
-Input/Output data used for manuscript
